@@ -12,8 +12,10 @@
 		2B1F7222225530140011D6FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1F7220225530140011D6FE /* Main.storyboard */; };
 		2B1F7224225530160011D6FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1F7223225530160011D6FE /* Assets.xcassets */; };
 		2B1F7227225530160011D6FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1F7225225530160011D6FE /* LaunchScreen.storyboard */; };
-		2B1F7236225570160011D6FE /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B1F7234225570160011D6FE /* DataModel.xcdatamodeld */; };
 		2B3E9B2A225608A600A6CE1E /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E9B29225608A600A6CE1E /* CategoryVC.swift */; };
+		2B3E9B2E22562D1A00A6CE1E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E9B2D22562D1A00A6CE1E /* Item.swift */; };
+		2B3E9B3022562D3C00A6CE1E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E9B2F22562D3C00A6CE1E /* Category.swift */; };
+		CA73A242C3C3E9DCE1339CFA /* Pods_inote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B3BA22B1943B5A3DCEA4A1 /* Pods_inote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,12 @@
 		2B1F7223225530160011D6FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B1F7226225530160011D6FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1F7228225530160011D6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B1F7235225570160011D6FE /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		2B3E9B29225608A600A6CE1E /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		2B3E9B2D22562D1A00A6CE1E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		2B3E9B2F22562D3C00A6CE1E /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		54B3BA22B1943B5A3DCEA4A1 /* Pods_inote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D09DAB98D79419E65B798EA /* Pods-inote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inote.release.xcconfig"; path = "Target Support Files/Pods-inote/Pods-inote.release.xcconfig"; sourceTree = "<group>"; };
+		C811CD4E2422C03AF5F334F0 /* Pods-inote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inote.debug.xcconfig"; path = "Target Support Files/Pods-inote/Pods-inote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA73A242C3C3E9DCE1339CFA /* Pods_inote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		024E19A9FB192477356E2089 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54B3BA22B1943B5A3DCEA4A1 /* Pods_inote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		179830D24849EB5DA3ADF5F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C811CD4E2422C03AF5F334F0 /* Pods-inote.debug.xcconfig */,
+				5D09DAB98D79419E65B798EA /* Pods-inote.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2B1F7210225530140011D6FE = {
 			isa = PBXGroup;
 			children = (
 				2B1F721B225530140011D6FE /* inote */,
 				2B1F721A225530140011D6FE /* Products */,
+				179830D24849EB5DA3ADF5F7 /* Pods */,
+				024E19A9FB192477356E2089 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +97,8 @@
 		2B1F7230225555610011D6FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2B1F7234225570160011D6FE /* DataModel.xcdatamodeld */,
+				2B3E9B2F22562D3C00A6CE1E /* Category.swift */,
+				2B3E9B2D22562D1A00A6CE1E /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B1F722B225530160011D6FE /* Build configuration list for PBXNativeTarget "inote" */;
 			buildPhases = (
+				4725EE0B5E61F9DB27E0FFE9 /* [CP] Check Pods Manifest.lock */,
 				2B1F7215225530140011D6FE /* Sources */,
 				2B1F7216225530140011D6FE /* Frameworks */,
 				2B1F7217225530140011D6FE /* Resources */,
+				6842EB21AE5D014F87684E40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,15 +197,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4725EE0B5E61F9DB27E0FFE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-inote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6842EB21AE5D014F87684E40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-inote/Pods-inote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-inote/Pods-inote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B1F7215225530140011D6FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B3E9B2E22562D1A00A6CE1E /* Item.swift in Sources */,
 				2B1F721F225530140011D6FE /* InoteListVC.swift in Sources */,
-				2B1F7236225570160011D6FE /* DataModel.xcdatamodeld in Sources */,
 				2B3E9B2A225608A600A6CE1E /* CategoryVC.swift in Sources */,
 				2B1F721D225530140011D6FE /* AppDelegate.swift in Sources */,
+				2B3E9B3022562D3C00A6CE1E /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +399,7 @@
 		};
 		2B1F722C225530160011D6FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C811CD4E2422C03AF5F334F0 /* Pods-inote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -337,6 +417,7 @@
 		};
 		2B1F722D225530160011D6FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D09DAB98D79419E65B798EA /* Pods-inote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,19 +455,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2B1F7234225570160011D6FE /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2B1F7235225570160011D6FE /* DataModel.xcdatamodel */,
-			);
-			currentVersion = 2B1F7235225570160011D6FE /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2B1F7211225530140011D6FE /* Project object */;
 }
