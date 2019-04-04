@@ -10,7 +10,9 @@
 import UIKit
 import CoreData
 import RealmSwift
-class InoteListVC: UITableViewController {
+import SwipeCellKit
+
+class InoteListVC: SwipeTableVC {
     
     var inoteItems : Results<Item>?
     
@@ -41,9 +43,7 @@ class InoteListVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "InoteItemCell", for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if let item = inoteItems?[indexPath.row] {
             
@@ -62,23 +62,15 @@ class InoteListVC: UITableViewController {
     // update , delete
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let item = inoteItems?[indexPath.row] {
-            do {
-                try realm.write {
-                    //realm.delete(item)
-                    item.done = !item.done
-                }
-                
-            } catch {
-                print("Error from table delegate in inotevc \(error)")
-            }
+        
             
-        }
+        
         self.tableView.reloadData()
         
         tableView.deselectRow(at: indexPath, animated: true)
+        }
         
-    }
+
     
     
     //MARK - Add New Items
@@ -132,6 +124,24 @@ class InoteListVC: UITableViewController {
 
         tableView.reloadData()
 
+    }
+    
+    
+    // delete 
+    override func updateModel(at indexPath: IndexPath) {
+        
+        if let item = inoteItems?[indexPath.row] {
+            do {
+                try realm.write {
+                    realm.delete(item)
+                    //item.done = !item.done
+                }
+                
+            } catch {
+                print("Error from table delegate in inotevc \(error)")
+            }
+            
+        }
     }
     
 }

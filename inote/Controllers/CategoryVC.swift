@@ -11,7 +11,7 @@ import UIKit
 import CoreData
 import RealmSwift
 
-class CategoryVC: UITableViewController {
+class CategoryVC: SwipeTableVC  {
     
     let realm = try! Realm() // inialize new access to realm
     
@@ -34,10 +34,10 @@ class CategoryVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
+       let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         cell.textLabel?.text = categories?[indexPath.row].name ?? "No Categories Addes Yet"
-        
+
         return cell
         
     }
@@ -79,9 +79,23 @@ class CategoryVC: UITableViewController {
         
         categories = realm.objects(Category.self)
         tableView.reloadData()
-
     }
+    //MARK: - delete data from Swipe
     
+    override func updateModel(at indexPath: IndexPath) {
+        
+        if let item = categories?[indexPath.row] {
+            do {
+                try realm.write {
+                    realm.delete(item)
+                }
+                
+            } catch {
+                print("Error from table delegate in inotevc \(error)")
+            }
+            
+        }
+    }
     
     //MARK: - Add New Categories
     
@@ -95,27 +109,17 @@ class CategoryVC: UITableViewController {
             
             let newCategory = Category()
             newCategory.name = textField.text!
-            
             //self.categories.append(newCategory) // since result updated auto
-            
             self.save(Category: newCategory)
             
         }
         
         alert.addAction(action)
-        
         alert.addTextField { (field) in
             textField = field
             textField.placeholder = "Add a new category"
         }
-        
         present(alert, animated: true, completion: nil)
-        
     }
-    
-    
-    
-    
-    
 }
 

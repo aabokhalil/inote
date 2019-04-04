@@ -15,6 +15,7 @@
 		2B3E9B2A225608A600A6CE1E /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E9B29225608A600A6CE1E /* CategoryVC.swift */; };
 		2B3E9B2E22562D1A00A6CE1E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E9B2D22562D1A00A6CE1E /* Item.swift */; };
 		2B3E9B3022562D3C00A6CE1E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E9B2F22562D3C00A6CE1E /* Category.swift */; };
+		2B3E9B3222567D8D00A6CE1E /* SwipeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E9B3122567D8D00A6CE1E /* SwipeTableVC.swift */; };
 		CA73A242C3C3E9DCE1339CFA /* Pods_inote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B3BA22B1943B5A3DCEA4A1 /* Pods_inote.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		2B3E9B29225608A600A6CE1E /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		2B3E9B2D22562D1A00A6CE1E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		2B3E9B2F22562D3C00A6CE1E /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2B3E9B3122567D8D00A6CE1E /* SwipeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableVC.swift; sourceTree = "<group>"; };
 		54B3BA22B1943B5A3DCEA4A1 /* Pods_inote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D09DAB98D79419E65B798EA /* Pods-inote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inote.release.xcconfig"; path = "Target Support Files/Pods-inote/Pods-inote.release.xcconfig"; sourceTree = "<group>"; };
 		C811CD4E2422C03AF5F334F0 /* Pods-inote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inote.debug.xcconfig"; path = "Target Support Files/Pods-inote/Pods-inote.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				2B3E9B29225608A600A6CE1E /* CategoryVC.swift */,
 				2B1F721E225530140011D6FE /* InoteListVC.swift */,
+				2B3E9B3122567D8D00A6CE1E /* SwipeTableVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-inote/Pods-inote-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -238,6 +242,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -255,6 +260,7 @@
 				2B1F721F225530140011D6FE /* InoteListVC.swift in Sources */,
 				2B3E9B2A225608A600A6CE1E /* CategoryVC.swift in Sources */,
 				2B1F721D225530140011D6FE /* AppDelegate.swift in Sources */,
+				2B3E9B3222567D8D00A6CE1E /* SwipeTableVC.swift in Sources */,
 				2B3E9B3022562D3C00A6CE1E /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
